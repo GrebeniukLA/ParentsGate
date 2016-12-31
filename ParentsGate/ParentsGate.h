@@ -15,6 +15,8 @@ FOUNDATION_EXPORT double ParentsGateVersionNumber;
 FOUNDATION_EXPORT const unsigned char ParentsGateVersionString[];
 
 #import <ParentsGate/KidsView.h>
+#import <ParentsGate/Settings.h>
+
 // In this header, you should import all the public headers of your framework using statements like #import <ParentsGate/PublicHeader.h>
 
 
