@@ -30,6 +30,20 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="ask_t" translatesAutoresizingMaskIntoConstraints="NO" id="fsg-o7-qlO">
                     <rect key="frame" x="63" y="81" width="250" height="40"/>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="die-LS-GsC">
+                    <rect key="frame" x="30" y="155" width="315" height="65"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 x 6 = " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WF-hh-h0i">
+                            <rect key="frame" x="0.0" y="0.0" width="216" height="65"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="43"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="ask_forma-otvet" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-VX-xEt">
+                            <rect key="frame" x="216" y="0.0" width="99" height="65"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fof-eq-dvE">
                     <rect key="frame" x="30" y="302" width="315" height="65"/>
                     <subviews>
@@ -37,10 +51,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                         </imageView>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFit" image="ask_forma-otvet" translatesAutoresizingMaskIntoConstraints="NO" id="E7c-zY-h3L" customClass="LAAnswerImage">
-                            <rect key="frame" x="83" y="0.0" width="65" height="65"/>
+                            <rect key="frame" x="83.5" y="0.0" width="65" height="65"/>
                         </imageView>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFit" image="ask_forma-otvet" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-05-8bK" customClass="LAAnswerImage">
-                            <rect key="frame" x="167" y="0.0" width="65" height="65"/>
+                            <rect key="frame" x="166.5" y="0.0" width="65" height="65"/>
                         </imageView>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" image="ask_forma-otvet" translatesAutoresizingMaskIntoConstraints="NO" id="VPl-LA-nu4" customClass="LAAnswerImage">
                             <rect key="frame" x="250" y="0.0" width="65" height="65"/>
@@ -56,20 +70,6 @@
                         <action selector="backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ftM-KF-i6X"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="die-LS-GsC">
-                    <rect key="frame" x="30" y="155" width="315" height="65"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 x 6 = " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WF-hh-h0i">
-                            <rect key="frame" x="0.0" y="0.0" width="216" height="65"/>
-                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="43"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="ask_forma-otvet" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-VX-xEt">
-                            <rect key="frame" x="216" y="0.0" width="99" height="65"/>
-                        </imageView>
-                    </subviews>
-                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -96,6 +96,11 @@
             </constraints>
             <connections>
                 <outlet property="answerStackView" destination="die-LS-GsC" id="gUa-ed-avR"/>
+                <outlet property="askDragTextImage" destination="uJU-AG-IP0" id="Vrs-TC-O2G"/>
+                <outlet property="askFonImage" destination="dsX-vS-dY2" id="mqy-Ox-5nm"/>
+                <outlet property="askFormImage" destination="UZa-Ej-8AD" id="qBl-8q-aKz"/>
+                <outlet property="askImage" destination="fsg-o7-qlO" id="TwH-lZ-GRb"/>
+                <outlet property="backButton" destination="hF2-s2-aqj" id="bs3-b3-DvO"/>
                 <outlet property="placeForAnswer" destination="pgY-VX-xEt" id="Ikf-1R-iCH"/>
                 <outlet property="question" destination="2WF-hh-h0i" id="WWu-m4-Ddx"/>
                 <outlet property="stackView" destination="Fof-eq-dvE" id="zvI-gb-07N"/>
