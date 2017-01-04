@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "ParentsGate"
-s.version      = "1.0.4"
+s.version      = "1.0.5"
 s.summary      = "A short description of ParentsGate."
 s.description  = "ParentsGate"
 
@@ -12,7 +12,7 @@ s.license      = "MIT"
 s.authors      = "LG"
 s.platform     = :ios, "9.0"
 
-s.source       = { :git => "https://github.com/GrebeniukLA/ParentsGate", :tag => "1.0.4" }
+s.source       = { :git => "https://github.com/GrebeniukLA/ParentsGate", :tag => "#{s.version}" }
 
 # { :path => '.' }
 #{ :git => "http://EXAMPLE/ParentsGate.git", :tag => "#{s.version}" }
