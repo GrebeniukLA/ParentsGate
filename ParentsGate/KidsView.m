@@ -36,9 +36,13 @@
     
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self settingQuestion];
+
     [self.askImage setImage:[self loadImageFromResourceBundle:@"ask_t"]];
-    [self.askFonImage setImage:[self loadImageFromResourceBundle:@"ask_fon_1136"]];
+    if (iPad) {
+        [self.askFonImage setImage:[self loadImageFromResourceBundle:@"ask_fon_1536"]];
+    } else {
+        [self.askFonImage setImage:[self loadImageFromResourceBundle:@"ask_fon_1136"]];
+    }
     [self.askFormImage setImage:[self loadImageFromResourceBundle:@"ask_forma-fon"]];
     [self.placeForAnswer setImage:[self loadImageFromResourceBundle:@"ask_forma-otvet"]];
     [self.askDragTextImage setImage:[self loadImageFromResourceBundle:@"ask_t__drag"]];

@@ -17,13 +17,13 @@
 
 - (UILabel*)label {
     if (!_label) {
-        _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 65, 65)];
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         if (iPad) {
             [_label setFont:[UIFont fontWithName:@"Trebuchet MS" size:45]];
         } else {
             [_label setFont:[UIFont fontWithName:@"Trebuchet MS" size:25]];
         }
-        _label.center = CGPointMake(32, 32);
+        _label.center = CGPointMake(self.frame.size.width/2, self.frame.size.width/2);
         _label.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_label];
     }

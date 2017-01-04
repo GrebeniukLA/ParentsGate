@@ -12,5 +12,6 @@
 @interface KidsView : UIView
 
 @property (copy, readwrite, nonatomic) void (^correctAnswerBlock)(void);
-
+- (void)settingQuestion;
+    
 @end

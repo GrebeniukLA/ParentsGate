@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -26,7 +30,7 @@
                     <rect key="frame" x="175" y="294" width="419" height="140"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 x 6 = " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMn-rj-WxT">
-                            <rect key="frame" x="0.0" y="21" width="279" height="99"/>
+                            <rect key="frame" x="0.0" y="20.5" width="279" height="99"/>
                             <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="85"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
@@ -56,14 +60,14 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asb-9Y-lbD">
                     <rect key="frame" x="314" y="792" width="140" height="140"/>
                     <state key="normal" image="ask_bt__back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="PvF-ri-9K7"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="JKV-2G-V0l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4VW-r7-MaE"/>
                 <constraint firstAttribute="trailing" secondItem="EwE-ZD-OxG" secondAttribute="trailing" id="5Vp-TA-eMd"/>
@@ -85,6 +89,11 @@
             </constraints>
             <connections>
                 <outlet property="answerStackView" destination="B0o-Al-oGU" id="KGo-NR-A74"/>
+                <outlet property="askDragTextImage" destination="JKV-2G-V0l" id="xI4-ge-Wih"/>
+                <outlet property="askFonImage" destination="oMS-W4-vXs" id="uLa-cH-GNq"/>
+                <outlet property="askFormImage" destination="EwE-ZD-OxG" id="dSa-P4-Wrf"/>
+                <outlet property="askImage" destination="9Ka-pF-LNb" id="OPR-Cd-wGh"/>
+                <outlet property="backButton" destination="Asb-9Y-lbD" id="Un1-uk-uQL"/>
                 <outlet property="placeForAnswer" destination="7I6-gg-YEH" id="LLR-W6-t47"/>
                 <outlet property="question" destination="zMn-rj-WxT" id="88M-Yo-hrd"/>
                 <outlet property="stackView" destination="kAr-8s-olI" id="Rgd-OS-mle"/>
@@ -103,4 +112,9 @@
         <image name="ask_t" width="550" height="80"/>
         <image name="ask_t__drag" width="550" height="80"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

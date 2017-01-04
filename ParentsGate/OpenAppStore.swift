@@ -31,6 +31,7 @@ public struct OpenAppStore {
     {
         let kidsView = KidsView.loadFromNib()
         kidsView.frame = vc.view.frame
+        kidsView.settingQuestion()
         vc.view.addSubview(kidsView)
         kidsView.correctAnswerBlock = {
             self.openApp(link)
