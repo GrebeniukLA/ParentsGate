@@ -39,6 +39,7 @@ public struct Sharing {
     {
         let kidsView = KidsView.loadFromNib()
         kidsView.frame = pvc.view.frame
+        kidsView.settingQuestion()
         pvc.view.addSubview(kidsView)
         kidsView.correctAnswerBlock = {
             self.publish(vc, url: url)
