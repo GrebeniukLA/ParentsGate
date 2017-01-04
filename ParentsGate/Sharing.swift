@@ -8,14 +8,13 @@
 
 
 import UIKit
-import ParentsGate
 
 public struct Sharing {
     
     public init() {}
     
-    public func publish (_ pvc : UIViewController, vc : UIViewController, url: String) {
-        if true {
+    public func publish (_ pvc : UIViewController, vc : UIViewController, url: String, isKids: Bool) {
+        if isKids {
             askParens(pvc, vc: vc, url: url)
         } else {
             publish(vc, url: url)
