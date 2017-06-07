@@ -13,11 +13,11 @@ public struct Sharing {
     
     public init() {}
     
-    public func publish (_ pvc : UIViewController, vc : UIViewController, url: String, isKids: Bool) {
+    public func publish (_ pvc : UIViewController, vc : UIViewController, url: String, isKids: Bool, img: UIImage? = nil) {
         if isKids {
-            askParens(pvc, vc: vc, url: url)
+            askParens(pvc, vc: vc, url: url, img: img)
         } else {
-            publish(vc, url: url)
+            publish(vc, url: url, img: img)
         }
     }
     
@@ -37,7 +37,7 @@ public struct Sharing {
         }
     }
     
-    private func askParens (_ pvc : UIViewController, vc : UIViewController, url: String)
+    private func askParens (_ pvc : UIViewController, vc : UIViewController, url: String, img: UIImage? = nil)
     {
         let kidsView = KidsView.loadFromNib()
         kidsView.frame = pvc.view.frame
