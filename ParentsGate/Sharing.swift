@@ -21,12 +21,14 @@ public struct Sharing {
         }
     }
     
-    private func publish (_ vc : UIViewController, url: String)
+    private func publish (_ vc : UIViewController, url: String, img: UIImage? = nil)
     {
         let textToShare = NSLocalizedString("sharingText", comment: "sharingText")
-        if let myWebsite = URL(string: url)
-        {
-            let objectsToShare = [textToShare, myWebsite] as [Any]
+        if let myWebsite = URL(string: url) {
+            var objectsToShare = [textToShare, myWebsite] as [Any]
+            if let image = img {
+                objectsToShare.append(image)
+            }
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             if UIDevice.current.userInterfaceIdiom == .pad {
                 activityVC.popoverPresentationController!.sourceView = vc.view;
