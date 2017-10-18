@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "ParentsGate"
-s.version      = "1.0.17"
+s.version      = "1.0.18"
 s.summary      = "A short description of ParentsGate."
 s.description  = "ParentsGate"
 

@@ -12,16 +12,14 @@ public struct OpenAppStore {
     
     public init() {}
     
-    public func perforAction(_ vc : UIViewController, action: @escaping (() -> Swift.Void) , isKids: Bool)
+    public func perforAction(_ vc : UIViewController , isKids: Bool, action: @escaping (() -> Swift.Void))
     {
         if isKids {
             let kidsView = KidsView.loadFromNib()
             kidsView.frame = vc.view.frame
             kidsView.settingQuestion()
             vc.view.addSubview(kidsView)
-            kidsView.correctAnswerBlock = {
-                action()
-            }
+            kidsView.correctAnswerBlock = action
         } else {
             action()
         }
